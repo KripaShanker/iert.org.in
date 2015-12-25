@@ -36,4 +36,4 @@ $row=mysql_fetch_array(mysql_query("SELECT body,title,name from pages where name
 </div><!--//wrapper-->
 
 
-<?php include_once "footer.php";?>['']
+<?php include_once "footer.php";?>
