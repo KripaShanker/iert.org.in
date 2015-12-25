@@ -10,7 +10,7 @@
     <meta name="author" content="WebTeam, IERT">  
     <link rel="icon" href="favicon.png" type="image/png"/>	
     <link rel="shortcut icon" href="favicon.png">  
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>   
+      
     <!-- Global CSS -->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
   

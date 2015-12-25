@@ -11,7 +11,7 @@ $row=mysql_fetch_array(mysql_query("SELECT body,title,name from pages where name
 <div class="content container">
 	<div class="page-wrapper">
 		<header class="page-heading clearfix">
-			<h1 class="heading-title pull-left"><?php echo $row['title'] ?></h1>
+			<h1 class="heading-title pull-left"><?php echo stripcslashes($row['title']); ?></h1>
 		</header> 
 		<div class="page-content">
 			<div class="row page-row">
@@ -19,7 +19,7 @@ $row=mysql_fetch_array(mysql_query("SELECT body,title,name from pages where name
 					<?php
 
 					
-					echo $row['body'];
+					echo stripcslashes($row['body']);
 
 					?>                               
 				</div><!--//course-wrapper-->

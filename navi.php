@@ -14,76 +14,76 @@
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Institution <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="about.php">About us</a></li>
-                                <li><a href="history.php">History</a></li>
-                                <li><a href="dir_desks.php">Director's Message</a></li> 
-                                <li><a href="council.php">Council Members</a></li>             
+                                <li><a href="page.php?name=about">About us</a></li>
+                                <li><a href="page.php?name=history">History</a></li>
+                                <li><a href="page.php?name=dir_desk">Director's Message</a></li> 
+                                <li><a href="page.php?name=council">Council Members</a></li>             
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Academics <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="courses.php">Course Offered</a></li>
-                                <li><a href="fee.php">Fee Structure</a></li>   
+                                <li><a href="page.php?name=courses">Course Offered</a></li>
+                                <li><a href="page.php?name=fees">Fee Structure</a></li>   
                                         
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
                          <a class="dropdown-toggle" data-toggle="dropdown"  data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Admission <i class="fa fa-angle-down"></i></a>
                           <ul class="dropdown-menu">
-                                <li><a href="btech.php">B.Tech</a></li>
-                                <li><a href="diploma.php">Diploma</a></li>
+                                <li><a href="page.php?name=btech">B.Tech</a></li>
+                                <li><a href="page.php?name=diploma">Diploma</a></li>
                                 </li>
                                 </ul>
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Department<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="cse.php">Computer Science</a></li>
-                                <li><a href="elex.php">Electronics</a></li>
-                                <li><a href="ip.php">Industrial abnd Production</a></li>
-                                <li><a href="ee.php">Electrical</a></li>
-                                <li><a href="ic.php">Instrumentation and Control</a></li>
-                                <li><a href="mech.php">Mechanical</a></li>
-                                <li><a href="civil.php">Civil</a></li>
+                                <li><a href="page.php?name=cse">Computer Science</a></li>
+                                <li><a href="page.php?name=elex">Electronics</a></li>
+                                <li><a href="page.php?name=ip">Industrial abnd Production</a></li>
+                                <li><a href="page.php?name=ee">Electrical</a></li>
+                                <li><a href="page.php?name=ic">Instrumentation and Control</a></li>
+                                <li><a href="page.php?name=me">Mechanical</a></li>
+                                <li><a href="page.php?name=civil">Civil</a></li>
                                     
                             </ul>
                         </li><!--//dropdown-->
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Students <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="achievements.php"> Achievements</a></li>
-                                <li><a href="life_iert.php">Life at IERT</a></li>
+                                <li><a href="page.php?name=achievements"> Achievements</a></li>
+                                <li><a href="page.php?name=life_iert">Life at IERT</a></li>
                                                  
                             </ul>
                         </li><!--//dropdown-->
 						<li class="nav-item dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Campus <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="hostel.php"> Hostel</a></li>
-                                <li><a href="facilities.php">Facilities</a></li>
-								<li><a href="library.php">Library</a></li>
+                                <li><a href="page.php?name=hostel"> Hostel</a></li>
+                                <li><a href="page.php?name=facilities">Facilities</a></li>
+								<li><a href="page.php?name=library">Library</a></li>
                                                  
                             </ul>
                         </li>
 						<li class="nav-item dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#"> Activities	 <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="technovation.php"> Technovation</a></li>
-								<li><a href="sports.php"> Sports</a></li>
-                                <li><a href="udbhav.php"> Udbhav</a></li>
-                                                 <li><a href="fresher.php"> Freshers</a></li>
-												 <li><a href="farewell.php"> Farewell</a></li>
+                                <li><a href="page.php?name=technovation"> Technovation</a></li>
+								<li><a href="page.php?name=sports"> Sports</a></li>
+                                <li><a href="page.php?name=udbhav"> Udbhav</a></li>
+                                                 <li><a href="page.php?name=freshers"> Freshers</a></li>
+												 <li><a href="page.php?name=farewell"> Farewell</a></li>
                             </ul>
                         </li>
 						<li class="nav-item dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#"> T & P	 <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
-                                <li><a href="tpocell.php"> TPO Cell</a></li>
-                                <li><a href="recr_companies.php">	Recruiting Companies </a></li>
+                                <li><a href="page.php?name=tpo"> TPO Cell</a></li>
+                                <li><a href="page.php?name=recruiters">	Recruiting Companies </a></li>
                                                  
                             </ul>
                         </li>
-                        <li class="nav-item"><a href="contact.php">Contact</a></li>
+                        <li class="nav-item"><a href="page.php?name=contact">Contact</a></li>
                     </ul> </div><!--//navabr-collapse-->
             </div><!--//container-->
         </nav><!--//main-nav-->

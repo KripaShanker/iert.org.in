@@ -7,25 +7,32 @@ $result='';
 $msg='';
 $error='';
 $name='';
-if(isset($_GET['title']))
-	$title=$_GET['title'];
-if(isset($_GET['content']))
-	$body=mysql_real_escape_string($_GET['content']);
-if(isset($_GET['page_id']))
-	$id=$_GET['page_id'];
-if(isset($_GET['name']))
-	$name=$_GET['name'];
+if(isset($_POST['title']))
+	$title=addslashes(mysql_real_escape_string($_POST['title']));
+if(isset($_POST['content']))
+	$body=addslashes(mysql_real_escape_string($_POST['content']));
+if(isset($_POST['page_id']) || isset($_GET['page_id'])){
+	if(isset($_POST['page_id']))
+		 $id=$_POST['page_id'];
+	else if(isset($_GET['page_id']) )
+			$id=$_GET['page_id'];
+}
+if(isset($_POST['name']))
+	$name=$_POST['name'];
 //echo $body;
+//echo "page id $id";
 $sql="SELECT * from pages where id='$id'";
-
+echo $sql;
 $result=mysql_query($sql);
-if(isset($_GET['open'])){
+$num=mysql_num_rows($result);
+echo "numrow".$num;
+if(isset($_POST['open'])){
 	$row=mysql_fetch_array($result);
 	$body=$row['body'];
 	$title=$row['title'];
 	$name=$row['name'];
 }
-
+$num=mysql_num_rows($result);
 if(mysql_num_rows($result)==0 and $title!='' and $body!='' ){
 	$sql="INSERT INTO pages values('$id','$title','$body','$name')";
 	//echo $sql;
@@ -38,7 +45,7 @@ if(mysql_num_rows($result)==0 and $title!='' and $body!='' ){
 		$error= "$sql error ".mysql_error($con);
 	}	
 }
-else if(isset($_GET['submit']) && $title!=''){
+else if(isset($_POST['submit']) && $title!=''){
 	$sql="UPDATE pages set body='$body',title='$title' where id=$id";
 	//echo $sql;
 	$update=mysql_query($sql);
@@ -50,8 +57,8 @@ else if(isset($_GET['submit']) && $title!=''){
 	}	
 }
 
-if(isset($_GET['delete']) && $_GET['delete']=="delete"){
-	$delete=$_GET['delete_id'];
+if(isset($_POST['delete']) && $_POST['delete']=="delete"){
+	$delete=$_POST['delete_id'];
 	$sql="DELETE from pages where id=$delete";
 	//echo $sql;
 	if(mysql_query($sql)){
@@ -107,7 +114,7 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 				<div class="rows">
 					<div class="col-lg-12">
 						<?php
-						if(isset($_GET['delete']) or isset($_GET['submit']) and $_GET['submit']=="show"){
+						if(isset($_POST['delete']) or isset($_GET['submit']) and $_GET['submit']=="show"){
 
 							?>
 							<table class="table">
@@ -132,9 +139,9 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 				</div>
 				<div class="rows">
 					<div class="col-lg-8">
-						<form action="#" method="GET" class="form-horizontal">
+						<form action="#" method="POST" class="form-horizontal">
 							<div class="form-group">
-								<label>Page id:  <input type="text" class="form-control disabled" id="page_id"  name="page_id" <?php if(isset($_GET['add']) || isset($_GET['page_id'])) echo "readonly" ; ?> value=<?php echo '"'.$id.'"'; ?>  placeholder="enter page id">
+								<label>Page id:  <input type="text" class="form-control disabled" id="page_id"  name="page_id" <?php if(isset($_GET['add']) || isset($_POST['page_id'])) echo "readonly" ; ?> value=<?php echo '"'.$id.'"'; ?>  placeholder="enter page id">
 								</label>
 								<input type="submit" name="open" value="open">
 								<label>Unique name:  <input type="text" class="form-control" id=""  name="name"   <?php if(!isset($_GET['add'])) echo "readonly" ; ?> value=<?php echo '"'.$name.'"'; ?>  placeholder="unique name without space">
@@ -171,7 +178,7 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 					<div class="rows">
 						
 						<div class="col-lg-12">
-							<form method="GET" action="#">
+							<form method="POST" action="#">
 								<input type="text" class="form-control col-md-2 form-group" name="delete_id" placeholder="enter id of page to be deleted"><br>
 								<input type="submit" class="btn btn-danger form-group" name="delete" value="delete">
 							</form>
