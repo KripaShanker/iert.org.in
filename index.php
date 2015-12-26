@@ -7,21 +7,42 @@ include 'header.php';
         <div class="content container">
             <div id="promo-slider" class="slider flexslider">
                 <ul class="slides">
-                    <li>
-                        <img src="assets/images/slides/slide-1.jpg"  alt="" />
+                    
+                	<li>
+                        <img src="assets/images/slides/slide-5.jpg"  alt="" />
                         <p class="flex-caption">
-                            <span class="main" >Join a tradition of Knowledge & trust</span>
+                            <span class="main" >IERT Polytechnic</span>
                             <br />
-                            <span class="secondary clearfix" >Choose from over 50 career courses</span>
+                            <span class="secondary clearfix" >Established in 1955</span>
                         </p>
                     </li>
-                  
+
                     <li>
-                        <img src="assets/images/slides/slide-4.jpg"  alt="" />
+                        <img src="assets/images/slides/slide-3.jpg"  alt="" />
+                        <p class="flex-caption">
+                            <span class="main" >One of the Best Colleges of Asia</span>
+                            <br />
+                            <span class="secondary clearfix" >Ranked 1<sup>st</sup> in Diploma</span>
+                        </p>
+                    </li>
+
+                    <li>
+                        <img src="assets/images/slides/slide-1.jpg"  alt="" />
                         <p class="flex-caption">
                             <span class="main" >Engineering Degree Division</span>
                             <br />
                             <span class="secondary clearfix" >Established in 2001</span>
+                        </p>
+                    </li>
+                  
+                    
+
+                    <li>
+                        <img src="assets/images/slides/slide-4.jpg"  alt="" />
+                        <p class="flex-caption">
+                            <span class="main" >Diverse courses</span>
+                            <br />
+                            <span class="secondary clearfix" >Choose from over 50 career courses</span>
                         </p>
                     </li>
                 </ul><!--//slides-->
