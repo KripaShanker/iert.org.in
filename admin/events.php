@@ -182,7 +182,7 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 									<td><?php echo $row['id'];?></td>
 									<td><?php echo $row['name'];?></td>
 									<td><?php echo $row['place'];?></td>
-									<td><?php echo $row['data'];?></td>
+									
 									<td><a class="btn btn-danger" href=<?php echo 'events.php?delete=delete&delete_id='.$id_link;?> >delete</a></td>
 									<td><a class="btn btn-default" href=<?php echo 'events.php?event_id='.$id_link."&open=open";?> >edit</a></td>
 
