@@ -93,6 +93,7 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 	
 	<script>tinymce.init({
   selector: "textarea",  // change this value according to your HTML
+  content_css : "./assets/plugins/bootstrap/css/bootstrap.min.css",
   plugins: "code",
   //toolbar: "code",
 });</script>	

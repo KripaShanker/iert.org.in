@@ -31,7 +31,7 @@ if(isset($_POST['event_id']) || isset($_GET['event_id'])){
 		$id=$_GET['event_id'];
 }
 if(isset($_POST['content']))
-	$data=$_POST['content'];
+	$data=addslashes(mysql_real_escape_string($_POST['content']));
 if(isset($_POST['time']))
 	$time=$_POST['time'];
 if(isset($_POST['date']))
@@ -67,7 +67,7 @@ if(@mysql_num_rows($result)==0 && $data!=''){
 		$error= "$sql error ".mysql_error($con);
 	}	
 }
-else if(isset($_POST['submit']) && $place!=''){
+else if(isset($_POST['submit'])){
 	$data=$_POST['content'];
 	$place=$_POST['place'];
 	$name=$_POST['name'];
@@ -111,7 +111,7 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 	
 	<script>tinymce.init({
   		selector: "textarea",  // change this value according to your HTML
-  		plugins: "code",
+  		plugins: "code",content_css : "./assets/plugins/bootstrap/css/bootstrap.min.css",
   		//toolbar: "code",
 		});</script>	
 
@@ -167,8 +167,8 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 							<thead>
 								<tr>
 									<th>ID</th>
-									<th>Page Title</th>
-									<th>Page Name</th>
+									<th>Event name</th>
+									<th>Event place</th>
 								</tr>
 							</thead>>
 
