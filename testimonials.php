@@ -14,7 +14,7 @@
                                         </blockquote>                
                                         <div class="row">
                                             <p class="people col-md-8 col-sm-3 col-xs-8"><span class="name">V. K. Mishra</span><br /><span class="title">Director, IERT</span></p>
-                                            <img class="profile col-md-4 pull-right" src="assets/images/testimonials/profile.png"  alt="" />
+                                            <img class="profile col-md-4 pull-right" src="assets/images/testimonials/vimal_mishra.png"  alt="" />
                                         </div>                               
                                     </div><!--//item-->
 									<!--
