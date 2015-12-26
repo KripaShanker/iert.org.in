@@ -8,8 +8,7 @@
 	<meta name="keywords" content="IERT, Allahabad, IERT Polytechnic, Placement, Result, Fee Structure,IERT Examination">
     <meta name="description" content="Institute of Engineering & Rural Technology IERT is one of the top engineering colleges in Allahabad among all Engineering Colleges in Uttar Pradesh and Allahabad. IERT has a long standing traditions of churning out industry stalwarts. The students at IERT are bright, ambitious, team players and serious about their academic progress. Website: http://iert.org.in">
     <meta name="author" content="WebTeam, IERT">  
-    <link rel="icon" href="favicon.png" type="image/png"/>	
-    <link rel="shortcut icon" href="favicon.png">  
+    <link rel="shortcut icon" href="assets/images/iert1.png">  
       
     <!-- Global CSS -->
     <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
@@ -19,16 +18,7 @@
     <link rel="stylesheet" href="assets/plugins/pretty-photo/css/prettyPhoto.css"> 
 
     <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
- <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-48318849-1', 'iert.org.in');
-  ga('send', 'pageview');
-
-</script>
+ 
 </head> 
 
 <body class="home-page">
@@ -45,18 +35,14 @@
                         <li><a href="#" ><i class="fa fa-google-plus"></i></a></li>         
                     </ul> -->
                     <form class="pull-right search-form" role="search">
-                        <button class="btn btn-theme">Login</button>&nbsp;&nbsp;
-                        <button class="btn btn-theme">Signup</button>
+                        <button class="btn "><a href="login.php">Login</a></button>&nbsp;&nbsp;
+                        <button class="btn "><a href="signup.php">Signup</a></button>
                     </form>        
                 </div>      
             </div><!--//to-bar-->
             <div class="header-main container">
 			 <div class="info col-md-12 col-sm-12">
-                    <ul class="menu-top navbar-right hidden-xs">
-                        <li class="divider"><a href="index.php">Home</a></li>
-                        <li class="divider"><a href="faq.php">FAQ</a></li>
-                        <li><a href="contact.php">Contact</a></li>
-                    </ul><!--//menu-top-->
+                    
                     <br />
                     <div class="contact pull-right ">
                         <p class="email"><i class="fa fa-envelope"></i><a href="#">admin@iert.org.in</a></p>
