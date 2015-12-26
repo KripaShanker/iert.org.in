@@ -66,7 +66,7 @@ include 'header.php';
          		}else{
          			
          			while($row=mysql_fetch_array($result))
-         			{	echo "hello";
+         			{	//echo "hello";
          				?>
          				<div class="event-item">
          					<p class="date-label">
@@ -77,10 +77,11 @@ include 'header.php';
          							<p class="time"><i class="fa fa-clock-o"></i><?php echo $row['time'];?></p>
          							<p class="location"><i class="fa fa-map-marker"></i><?php echo $row['place'];?></p>
          							</div>
-         					</div>
+         					
 
          				<a class="read-more" href=<?php echo "'event.php?name=".$row['name']."'";?> >Read more...<i class="fa fa-chevron-right"></i></a>
          				<p></p>
+                        </div>
          				<?php 
          			}
          		}
@@ -124,7 +125,7 @@ include 'header.php';
                     
                 </div><!--//col-md-3-->
             </div><!--//cols-wrapper-->
-            <?php include 'companies.php';?>
+            
         </div><!--//content-->
     </div><!--//wrapper-->
     

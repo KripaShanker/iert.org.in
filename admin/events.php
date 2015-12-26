@@ -54,7 +54,7 @@ if(isset($_POST['open']) || isset($_GET['open']) ){
 
 }
 //echo "data is ".$data;
-if(mysql_num_rows($result)==0 && $data!=''){
+if(@mysql_num_rows($result)==0 && $data!=''){
 	/* Insert event if event_id not present*/
 	$sql="INSERT INTO events values('$id','$name','$month','$date','$time','$place','$data')";
 //	echo $sql;
@@ -131,7 +131,7 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 					<ul class="nav navbar-nav">
 						<li class=""><a href="pages.php?submit=show">Pages</a></li>
 						<li  class=<?php if(isset($_GET['submit']) && $_GET['submit']=="show") echo '"active"';?>><a href="events.php?submit=show">Events</a></li>
-						<li  class=<?php if(isset($_GET[add])) echo '"active"';?>><a href="events.php?add=new">Add Events</a></li>
+						<li  class=<?php if(isset($_GET['add'])) echo '"active"';?>><a href="events.php?add=new">Add Events</a></li>
 						
 					</ul>
 				</div>
@@ -160,7 +160,7 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 				</div>
 			<div class="rows">
 				<div class="col-lg-12"><?php
-					if(isset($_GET['submit']) && $_GET['submit']=="show" || $_GET['delete']){
+					if(isset($_GET['submit']) && $_GET['submit']=="show" || isset($_GET['delete'])){
 
 						?>
 						<table class="table">
@@ -259,3 +259,8 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 		</div>
 	</body>
 	</html>
+
+	<?php
+	if($con)
+		mysql_close($con);
+?>

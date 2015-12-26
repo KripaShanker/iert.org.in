@@ -62,3 +62,8 @@ if(!isset($_SESSION['email'])){
 	</div>
 </body>
 </html>
+
+<?php
+	if($con)
+		mysql_close($con);
+?>

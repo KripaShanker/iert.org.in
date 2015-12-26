@@ -119,7 +119,7 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 				<div>
 					<ul class="nav navbar-nav">
 						<li class=<?php if(isset($_GET['submit']) && $_GET['submit']=="show") echo '"active"';?>><a href="pages.php?submit=show" >Pages</a></li>
-						<li class=<?php if(isset($_GET[add])) echo '"active"';?>><a href="pages.php?add=new">Add new</a></li>
+						<li class=<?php if(isset($_GET['add'])) echo '"active"';?>><a href="pages.php?add=new">Add new</a></li>
 						<li><a href="events.php?submit=show">Events</a></li>
 						
 					</ul>
@@ -236,3 +236,8 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 		</div>
 	</body>
 	</html>
+
+	<?php
+	if($con)
+		mysql_close($con);
+?>

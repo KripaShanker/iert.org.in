@@ -34,6 +34,8 @@ if (isset($_POST['submit'])) {
 	//echo "hello";	
 }
 
+
+
 ?>
 
 
@@ -48,7 +50,7 @@ if (isset($_POST['submit'])) {
 	<meta name="author" content="">
 	<link rel="icon" href="image/photo.jpg">
 
-	<title>Questionnaire</title>
+	<title>Login IERT </title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -122,3 +124,8 @@ if (isset($_POST['submit'])) {
   	<script src="ie10-viewport-bug-workaround.js"></script>
   </body>
   </html>
+
+<?php
+  if($con)
+    mysql_close($con);
+?>
