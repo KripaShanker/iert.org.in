@@ -15,9 +15,9 @@ $msg='';
 $error='';
 $name='';
 if(isset($_POST['title']))
-	$title=addslashes(mysql_real_escape_string($_POST['title']));
+	$title=addslashes(($_POST['title']));
 if(isset($_POST['content']))
-	$body=addslashes(mysql_real_escape_string($_POST['content']));
+	$body=addslashes(($_POST['content']));
 if(isset($_POST['page_id']) || isset($_GET['page_id'])){
 	if(isset($_POST['page_id']))
 		 $id=$_POST['page_id'];

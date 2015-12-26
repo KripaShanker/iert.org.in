@@ -21,9 +21,9 @@ $error='';
 $name='';
 /*initializing values from form*/
 if(isset($_POST['name']))
-	$name=addslashes(mysql_real_escape_string($_POST['name']));
+	$name=addslashes(($_POST['name']));
 if(isset($_POST['place']))
-	$place=addslashes(mysql_real_escape_string($_POST['place']));
+	$place=addslashes(($_POST['place']));
 if(isset($_POST['event_id']) || isset($_GET['event_id'])){
 	if(isset($_POST['event_id']))
 		$id=$_POST['event_id'];
@@ -31,7 +31,7 @@ if(isset($_POST['event_id']) || isset($_GET['event_id'])){
 		$id=$_GET['event_id'];
 }
 if(isset($_POST['content']))
-	$data=addslashes(mysql_real_escape_string($_POST['content']));
+	$data=addslashes(($_POST['content']));
 if(isset($_POST['time']))
 	$time=$_POST['time'];
 if(isset($_POST['date']))
@@ -99,6 +99,7 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 }
 
 ?>
+
 
 
 

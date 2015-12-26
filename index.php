@@ -116,7 +116,7 @@ include 'header.php';
                          <p><a href="#">Computer Science Society</a></p>
 						 <p> &nbsp;</p>
                         </div><!--//section-content-->
-</section><!--//links-->lo
+</section><!--//links-->
                     </section>
                 </div>
                 <div class="col-md-3">

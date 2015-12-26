@@ -13,7 +13,7 @@
  					error_reporting(E_ALL ^ E_DEPRECATED);
  					$sql=$var="";
  					$sq1=mysql_query("select max(id) as std from updates"); 
- 					$val=mysql_fetch_array($sq1);
+ 					$val=@mysql_fetch_array($sq1);
  					if(!$val)
  						{echo "No Updates to display!";
  				}else{
@@ -22,7 +22,7 @@
  					{
  						
  						$data=mysql_query("select * from updates where id='$sq' ");
- 						while($info=mysql_fetch_array($data))
+ 						while($info=@mysql_fetch_array($data))
  						{
  							echo "  <div class='col-md-4 news-item'>
  							<h2 class='title'><a href='news.php?id=".$sq."'>$info[heading]</a></h2>
@@ -47,7 +47,7 @@
  				for($j=0;$j<3;$j++)
  				{
  					$data=mysql_query("select heading,image,description from updates where id='$sq' ");
- 					while($info=mysql_fetch_array($data))
+ 					while($info=@mysql_fetch_array($data))
  					{
  						
  						
