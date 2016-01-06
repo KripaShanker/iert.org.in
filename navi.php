@@ -48,6 +48,17 @@
                                     
                             </ul>
                         </li><!--//dropdown-->
+                       
+
+                        <li class="nav-item dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Examinations <i class="fa fa-angle-down"></i></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="http://www.uptu.ac.in/results_even_14_15.html" target="_blank">Result</a></li>
+                                <li><a href="http://www.uptu.ac.in/ex_schedule_ug.html" target="_blank">Exam Schedule</a></li>   
+                                        
+                            </ul>
+                        </li>
+                        <!--
                         <li class="nav-item dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Students <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
@@ -55,13 +66,19 @@
                                 <li><a href="page.php?name=life_iert">Life at IERT</a></li>
                                                  
                             </ul>
-                        </li><!--//dropdown-->
+                        </li>
+                        -->
+                        <!--//dropdown-->
 						<li class="nav-item dropdown">
                             <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">Campus <i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
+                                <li><a href="page.php?name=achievements"> Achievements</a></li>
+                                
+                                                 
                                 <li><a href="page.php?name=hostel"> Hostel</a></li>
                                 <li><a href="page.php?name=facilities">Facilities</a></li>
 								<li><a href="page.php?name=library">Library</a></li>
+                                <li><a href="page.php?name=life_iert">Life at IERT</a></li>
                                                  
                             </ul>
                         </li>

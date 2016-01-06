@@ -69,7 +69,7 @@ corresponding value from the list below*/
     text-decoration: inherit;
 /*--adjust as necessary--*/
     color: #000;
-    font-size: ;
+    
     padding-right: 0.5em;
     /*position: absolute;
     top: 320px;
@@ -188,7 +188,7 @@ ul.speciallist
 				width: 1.2em;
 				height: 1.2em;
 				border-radius: .6em;
-				font-size: 12px;em;
+				font-size: 12px;
 			}
 			
 			ul.speciallist a#logout,ul.speciallist1 a#logout

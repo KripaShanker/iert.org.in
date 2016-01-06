@@ -42,10 +42,10 @@ if(isset($_POST['open']) || isset($_GET['open']) ){
 $num=mysql_num_rows($result);
 
 if(mysql_num_rows($result)==0 and $title!='' and $body!='' ){
-	$body=htmlspecialchars($body);
+	
 	$sql="INSERT INTO pages values('$id','$title','$body','$name')";
-	echo $sql;
-	echo "num rows are zero";
+	//echo $sql;
+	//echo "num rows are zero";
 	$insert=mysql_query($sql);
 	if($insert){
 		$msg="page added";

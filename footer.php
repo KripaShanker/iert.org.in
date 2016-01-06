@@ -7,10 +7,10 @@
                     <div class="footer-col-inner">
                         <h3>About</h3>
                         <ul>
-                            <li><a href="about.php"><i class="fa fa-caret-right"></i>About us</a></li>
-                            <li><a href="contact.php"><i class="fa fa-caret-right"></i>Contact us</a></li>
-                            <li><a href="faq.php"><i class="fa fa-caret-right"></i>FAQ's</a></li>
-                            <li><a href="tpo.php"><i class="fa fa-caret-right"></i>TPO Cell</a></li>
+                            <li><a href="page.php?name=about"><i class="fa fa-caret-right"></i>About us</a></li>
+                            <li><a href="page.php?name=contact"><i class="fa fa-caret-right"></i>Contact us</a></li>
+                            <li><a href="page.php?name=faq"><i class="fa fa-caret-right"></i>FAQ's</a></li>
+                            <li><a href="page.php?name=tpo"><i class="fa fa-caret-right"></i>TPO Cell</a></li>
                         </ul>
                     </div><!--//footer-col-inner-->
                 </div><!--//foooter-col-->
@@ -41,7 +41,7 @@
                                 </span>
                             </p>
                             <!--p class="tel col-md-12 col-sm-4"><i class="fa fa-phone"></i>0800 123 4567</p-->
-                            <p class="email col-md-12 col-sm-4"><i class="fa fa-envelope"></i><a href="#">admin@iert.org.in</a></p>  
+                            <p class="email col-md-12 col-sm-4"><i class="fa fa-envelope"></i><a href="mailto:admin@iert.org.in">admin@iert.org.in</a></p>  
                         </div> 
                     </div><!--//footer-col-inner-->            
                 </div><!--//foooter-col-->   
@@ -69,7 +69,7 @@
     
    
     <!-- Javascript -->          
-    <script type="text/javascript" src="assets/plugins/jquery-1.10.2.min.js"></script>
+   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
     <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
     <script type="text/javascript" src="assets/plugins/bootstrap-hover-dropdown.min.js"></script> 

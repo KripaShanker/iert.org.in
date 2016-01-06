@@ -2,8 +2,11 @@
 include_once 'header.php';
 include_once 'navi.php';
 include 'connectdb.php';
-$name=$_GET['name'];
-$row=mysql_fetch_array(mysql_query("SELECT body,title,name from pages where name='$name'"));
+$name=htmlspecialchars(mysql_escape_string($_GET['name']));
+$result=mysql_query("SELECT body,title,name from pages where name='$name'");
+
+$row=mysql_fetch_array($result)
+
 ?>
 
 
@@ -20,7 +23,7 @@ $row=mysql_fetch_array(mysql_query("SELECT body,title,name from pages where name
 
 					
 					echo stripcslashes($row['body']);
-
+        
 					?>                               
 				</div><!--//course-wrapper-->
 				<aside class="page-sidebar  col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1">     
@@ -36,4 +39,6 @@ $row=mysql_fetch_array(mysql_query("SELECT body,title,name from pages where name
 </div><!--//wrapper-->
 
 
-<?php include_once "footer.php";?>
+<?php
+        
+    include_once "footer.php";?>

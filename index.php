@@ -9,15 +9,16 @@ include 'header.php';
                 <ul class="slides">
                     
                 	<li>
-                        <img src="assets/images/slides/slide-5.jpg"  alt="" />
+                        <img src="https://dl.dropboxusercontent.com/s/fz8g5baw7uz97gg/slide-5.jpg"  alt="" />
                         <p class="flex-caption">
                             <span class="main" >IERT Polytechnic</span>
                             <br />
                             <span class="secondary clearfix" >Established in 1955</span>
                         </p>
                     </li>
-
+<!--
                     <li>
+                        
                         <img src="assets/images/slides/slide-3.jpg"  alt="" />
                         <p class="flex-caption">
                             <span class="main" >One of the Best Colleges of Asia</span>
@@ -25,9 +26,10 @@ include 'header.php';
                             <span class="secondary clearfix" >Ranked 1<sup>st</sup> in Diploma</span>
                         </p>
                     </li>
-
+-->
                     <li>
-                        <img src="assets/images/slides/slide-1.jpg"  alt="" />
+                        
+                        <img src="https://dl.dropboxusercontent.com/s/5q1c6jq3w2sn1hr/slide-1.jpg"  alt="" />
                         <p class="flex-caption">
                             <span class="main" >Engineering Degree Division</span>
                             <br />
@@ -35,7 +37,7 @@ include 'header.php';
                         </p>
                     </li>
                   
-                    
+                    <!--
 
                     <li>
                         <img src="assets/images/slides/slide-4.jpg"  alt="" />
@@ -92,23 +94,23 @@ include 'header.php';
                 <div class="col-md-6">
                     <h1 class="section-heading text-highlight"><span class="line">IERT, Allahabad</span></h1>
                     <div>
-						<img src="assets/images/iert.jpg">
+                        <img src="https://dl.dropboxusercontent.com/s/5q1c6jq3w2sn1hr/slide-1.jpg" class="img-responsive">
 						<div>
 						<p>IERT has a long standing tradition of churning out industry stalwarts.<br> The successful alumni who have passed out as students from this<br> institution stand testimony to the standards of excellence maintained by<br> the institute. The students at IERT are bright, ambitious, team players <br> and serious about their academic progress.</p>
 						</div></div>
 						<section class="links">
                         <h1 class="section-heading text-highlight"><span class="line">Societies</span></h1>
                          <div class="col-md-3">
-                         <p><a href="http://elex.iert.org.in"><img src="assets/images/elektron1.png"></a></p>
+                         <p><a href="#"><img src="assets/images/elektron1.png"></a></p>
 						 <p>&nbsp;</p>
                         </div><!--//section-content-->
 						<div class="col-md-3">
-						<p><a href="http://elex.iert.org.in"><h3><em>Elektron</em></h3></a></p>
-						<p><a href="http://elex.iert.org.in">Society of Electronics & IC</a></p>
+						<p><a href="#"><h3><em>Elektron</em></h3></a></p>
+						<p><a href="#">Society of Electronics & IC</a></p>
 						 <p> &nbsp;</p>
                         </div><!--//section-content-->
 						<div class="col-md-3">
-                         <p><a href="http://cs.iert.org.in"><img src="assets/images/reboot.png" ></a></p>
+                         <p><a href="http://iert.org.in"><img src="assets/images/reboot.png" ></a></p>
 						 <p>&nbsp;</p>
                         </div><!--//section-content-->
 						<div class="col-md-3">

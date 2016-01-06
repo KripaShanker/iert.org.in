@@ -2,7 +2,7 @@
 include "connectdb.php";
 $row='';
 $name='';
-if(basename($_SERVER['PHP_SELF'])=="page.php"){
+if(basename($_SERVER['PHP_SELF'])=="page.php" && isset($_GET['name'])){
   $name=$_GET['name'];
   $row=mysql_fetch_array(mysql_query("SELECT body,title,name from pages where name='$name'"));
 }
@@ -18,21 +18,32 @@ else if(basename($_SERVER['PHP_SELF'])=="event.php"){
 
 <!DOCTYPE html>
 <head>
-  <title>Institute of Engineering & Rural Technology, Allahabad</title>
+    <title> <?php if(isset($_GET['name'])) echo $_GET['name']." | "; ?> IERT Allahabad</title>
   <!-- Meta -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="alternate" hreflang="en-US" href=<?php $name_meta='' ;if(isset($_GET['name'])) $name_meta=$_GET['name'];echo "\"".$_SERVER['PHP_SELF']."?name=".$name_meta."\""; ?> />
   <meta name="keywords" content="IERT, Allahabad, IERT Polytechnic, Placement, Result, Fee Structure,IERT Examination">
-  <meta name="description" content="Institute of Engineering & Rural Technology IERT is one of the top engineering colleges in Allahabad among all Engineering Colleges in Uttar Pradesh and Allahabad. IERT has a long standing traditions of churning out industry stalwarts. The students at IERT are bright, ambitious, team players and serious about their academic progress. Website: http://iert.org.in">
+  <?php
+    if(basename($_SERVER['PHP_SELF'])=="index.php" ){
+  ?>
+  <meta name="description" content="Institute of Engineering & Rural Technology IERT is one of the top engineering colleges in Allahabad among all Engineering Colleges in Uttar Pradesh and Allahabad. IERT has a long standing traditions of churning out industry stalwarts. The students at IERT are bright, ambitious, team players and serious about their academic progress.">
+  <?php
+    }
+  ?>
   <meta name="author" content="WebTeam, IERT">  
   <link rel="shortcut icon" href="assets/images/iert1.png">  
 
   <!-- Global CSS -->
-  <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-
-  <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
-  <link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">   
+  
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+ <!-- this is jquery from cdn remove comment when it is required
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
+ -->
+ 
+ <link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css">
   <link rel="stylesheet" href="assets/plugins/pretty-photo/css/prettyPhoto.css"> 
 
   <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
@@ -43,15 +54,22 @@ else if(basename($_SERVER['PHP_SELF'])=="event.php"){
   
 
 <?php
-  if(basename($_SERVER['PHP_SELF'])=="page.php")
+  if(basename($_SERVER['PHP_SELF'])=="page.php" and isset($_GET['name'])){
     echo "<meta property=\"og:description\"            content=\"   ".substr(htmlspecialchars(strip_tags($row['body'])),0,300)."   \" /> ";
-  else if(basename($_SERVER['PHP_SELF'])=="event.php")
+    echo "<meta name=\"description\" content=\"".substr(htmlspecialchars(strip_tags($row['body'])),0,300)."\"/>";
+    
+  }
+    else if(basename($_SERVER['PHP_SELF'])=="event.php"){
     echo "<meta property=\"og:description\"            content=\"".substr(htmlspecialchars( strip_tags($row['data'])),0,300)." \" /> ";
-?>
+    echo "<meta name=\"description\" content=\"".substr(htmlspecialchars(strip_tags($row['data'])),0,300)."\"/>";
+    
+    }
+    ?>
 
 
   <meta property="fb:app_id"          content="720122941420544" /> 
   <?php include "analytics.php"; ?>
+  <!--
   <script>
     window.fbAsyncInit = function() {
       FB.init({
@@ -69,7 +87,7 @@ else if(basename($_SERVER['PHP_SELF'])=="event.php"){
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
   </script>
-
+-->
 </head> 
 
 <body class="home-page">
@@ -96,7 +114,7 @@ else if(basename($_SERVER['PHP_SELF'])=="event.php"){
 
                       <br />
                       <div class="contact pull-right ">
-                        <p class="email"><i class="fa fa-envelope"></i><a href="#">admin@iert.org.in</a></p>
+                        <p class="email"><i class="fa fa-envelope"></i><a href="mailto:admin@iert.org.in">admin@iert.org.in</a></p>
                       </div><!--//contact-->
                     </div><!--//info-->
                     <h1 class="logo col-md-2 col-sm-2">
