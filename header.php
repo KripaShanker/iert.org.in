@@ -118,7 +118,7 @@ else if(basename($_SERVER['PHP_SELF'])=="event.php"){
                       </div><!--//contact-->
                     </div><!--//info-->
                     <h1 class="logo col-md-2 col-sm-2">
-                     <a href="#"><img id="logo" src="assets/images/iert21.png" alt="Logo"></a></h1>
+                     <a href="#"><img id="logo" src="https://dl.dropboxusercontent.com/s/vzcb99lrgh2x831/iert21.png" alt="Logo"></a></h1>
                      <div class="head col-md-10 col-sm-10"><h1><strong>Institute of Engineering & Rural Technology<br/>Allahabad, India</strong></h1></div>	
                      <!--//logo-->           
 

@@ -101,7 +101,7 @@ include 'header.php';
 						<section class="links">
                         <h1 class="section-heading text-highlight"><span class="line">Societies</span></h1>
                          <div class="col-md-3">
-                         <p><a href="#"><img src="assets/images/elektron1.png"></a></p>
+                         <p><a href="#"><img src="https://dl.dropboxusercontent.com/s/fpl7hghdorersf0/elektron1.png"></a></p>
 						 <p>&nbsp;</p>
                         </div><!--//section-content-->
 						<div class="col-md-3">
@@ -110,7 +110,7 @@ include 'header.php';
 						 <p> &nbsp;</p>
                         </div><!--//section-content-->
 						<div class="col-md-3">
-                         <p><a href="http://iert.org.in"><img src="assets/images/reboot.png" ></a></p>
+                         <p><a href="http://iert.org.in"><img src="https://dl.dropboxusercontent.com/s/i72uowznhqjt40r/reboot.png" ></a></p>
 						 <p>&nbsp;</p>
                         </div><!--//section-content-->
 						<div class="col-md-3">
