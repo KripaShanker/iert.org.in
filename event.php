@@ -1,6 +1,6 @@
 <?php
 include_once 'header.php';
-include_once 'navi.php';
+
 include 'connectdb.php';
 $name=mysql_escape_string($_GET['name']);
 $row=mysql_fetch_array(mysql_query("SELECT * from events where name='$name'"));

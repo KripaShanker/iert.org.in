@@ -8,7 +8,51 @@
 			document.getElementById("FM").focus();
 		}
 	</script>
-	<link rel="stylesheet" type="text/css" href="style_you.css">
+	<style type="text/css">
+		@CHARSET "UTF-8";
+body{
+	
+	margin:0 ;
+}
+input,input:focus{
+	width:100%;
+	margin:0px;
+	border:0px;	
+}
+
+label{
+	text-align:centre;
+}
+
+submit{
+	border:0px;
+}
+
+#container{
+	background-color:#bbb;
+	height: 100%
+	
+}
+#header{
+	height:120px;
+	padding-top:1px;
+	background-color:#ddd;
+}
+#footer{
+	height:30px;
+	position: absolute;
+	bottom: 5px;
+	
+}
+#form{
+	border:solid 0px;
+	background-color:#AAA;
+	width:50%;margin:auto;
+	
+	padding:5px; 
+}
+
+	</style>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 </head>
 <body onload="focused()">
@@ -81,7 +125,9 @@
 		//echo $temp.' ' ;
 					$url = "https://www.youtube.com/embed/".$temp;;
 	//echo $url;	
-					echo "<br>";	
+					echo "<br>";
+					echo htmlspecialchars('<iframe width="560" height="315" src="'.$url.'?vq=small&rel=0&autoplay=1&loop=1&iv_load_policy=3" frameborder="0" allowfullscreen></iframe>'	);
+					echo "<br>";
 					echo '<iframe width="560" height="315" src="'.$url.'?vq=small&rel=0&autoplay=1&loop=1&iv_load_policy=3" frameborder="0" allowfullscreen></iframe>';	
 
 					unset($_GET['frm']);

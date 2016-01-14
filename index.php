@@ -2,7 +2,7 @@
 <?php
 include 'header.php';
 ?>
-        <?php include 'navi.php';?>
+       
   <!-- ******CONTENT****** --> 
         <div class="content container">
             <div id="promo-slider" class="slider flexslider">

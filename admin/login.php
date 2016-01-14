@@ -52,8 +52,8 @@ if (isset($_POST['submit'])) {
 
 	<title>Login IERT </title>
 
-	<!-- Bootstrap core CSS -->
-	<link href="../assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Global CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">   
 
 	<!-- Custom styles for this template -->
 	<link href="signin.css" rel="stylesheet">

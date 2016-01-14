@@ -38,9 +38,11 @@ if(isset($_POST['date']))
 	$date=$_POST['date'];
 if(isset($_POST['month']))
 	$month=$_POST['month'];
-$sql="SELECT * from events where id=$id";
+$sql="SELECT * from events where id='$id' or name='$name'";
 $result=mysql_query($sql);
 //echo $sql;
+
+
 /*initializing values from tables if no data is found in GET*/
 if(isset($_POST['open']) || isset($_GET['open']) ){
 	$row=mysql_fetch_array($result);
@@ -58,7 +60,7 @@ if(@mysql_num_rows($result)==0 && $data!=''){
 	/* Insert event if event_id not present*/
 	$sql="INSERT INTO events values('$id','$name','$month','$date','$time','$place','$data')";
 //	echo $sql;
-//	echo "num rows are zero";
+	echo "num rows are zero";
 	$insert=mysql_query($sql);
 	if($insert){
 		$msg="page added";
@@ -68,15 +70,17 @@ if(@mysql_num_rows($result)==0 && $data!=''){
 	}	
 }
 else if(isset($_POST['submit'])){
-	$data=$_POST['content'];
+	$data=addslashes($_POST['content']);
 	$place=$_POST['place'];
 	$name=$_POST['name'];
 	$month=$_POST['month'];
 	$time=$_POST['time'];
 	$place=$_POST['place'];
 	$date=$_POST['date'];
-	$sql="UPDATE events set data='$data',name='$name',place='$place',month='$month',time='$time' where id=$id";
-	//echo $sql;
+	
+
+	$sql="UPDATE events set data='$data',name='$name',place='$place',month='$month',time='$time' where id='$id' or name='$name'";
+	//echo "\n".$sql;
 	$update=mysql_query($sql);
 	if($update){
 		$msg="event updated";
@@ -107,12 +111,13 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 <html>
 <head>
 	<title>Admin IERT</title>
-	<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css">
+	  <!-- Global CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">   
 	<script src="../assets/js/tinymce/tinymce.min.js"></script>
 	
 	<script>tinymce.init({
   		selector: "textarea",  // change this value according to your HTML
-  		plugins: "code",content_css : "./assets/plugins/bootstrap/css/bootstrap.min.css",
+  		plugins: "code",content_css : "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css",
   		//toolbar: "code",
 		});</script>	
 
@@ -227,7 +232,7 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 
 							<div class="form-group"> <label for="content col-lg-5" >Content</label><br>     
 
-								<textarea name="content" cols="15"><?php echo $data; ?></textarea>
+								<textarea name="content" cols="15"><?php echo stripslashes($data); ?></textarea>
 							</div>
 
 

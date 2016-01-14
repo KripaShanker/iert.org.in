@@ -1,6 +1,6 @@
 <?php
 include 'header.php';
-include 'navi.php';
+
 $rollnoErr=$emailErr=$genderErr=$passwordErr=$password=$email="";
 function test_input($data)
      {

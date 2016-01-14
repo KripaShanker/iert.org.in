@@ -1,6 +1,6 @@
 <?php 
 include "header.php";
-include "navi.php";
+
 include "connectdb.php";
 $error='';
 $msg='';

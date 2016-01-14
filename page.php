@@ -1,6 +1,6 @@
 <?php
 include_once 'header.php';
-include_once 'navi.php';
+
 include 'connectdb.php';
 $name=htmlspecialchars(mysql_escape_string($_GET['name']));
 $result=mysql_query("SELECT body,title,name from pages where name='$name'");

@@ -71,7 +71,7 @@
     <!-- Javascript -->          
    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script> 
     <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> 
     <script type="text/javascript" src="assets/plugins/bootstrap-hover-dropdown.min.js"></script> 
     <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
     <script type="text/javascript" src="assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>

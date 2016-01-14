@@ -28,7 +28,7 @@ if(isset($_POST['name']))
 	$name=$_POST['name'];
 //echo $body;
 //echo "page id $id";
-$sql="SELECT * from pages where id='$id'";
+$sql="SELECT * from pages where id='$id' or name='$name'";
 //echo $sql;
 $result=mysql_query($sql);
 $num=mysql_num_rows($result);
@@ -38,12 +38,14 @@ if(isset($_POST['open']) || isset($_GET['open']) ){
 	$body=$row['body'];
 	$title=$row['title'];
 	$name=$row['name'];
+	$id=$row['id'];
 }
+
 $num=mysql_num_rows($result);
 
 if(mysql_num_rows($result)==0 and $title!='' and $body!='' ){
 	
-	$sql="INSERT INTO pages values('$id','$title','$body','$name')";
+	$sql="INSERT INTO pages(id,title,body,name) values('$id','$title','$body','$name')";
 	//echo $sql;
 	//echo "num rows are zero";
 	$insert=mysql_query($sql);
@@ -55,8 +57,12 @@ if(mysql_num_rows($result)==0 and $title!='' and $body!='' ){
 	}	
 }
 else if(isset($_POST['submit']) && $title!=''){
-	$body=$_POST['content'];
-	$title=$_POST['title'];
+	$body=addslashes($_POST['content']);
+	$title=addslashes($_POST['title']);
+	//if id is not set
+	$row=mysql_fetch_array($result);
+	$id=$row['id'];
+	
 	$sql="UPDATE pages set body='$body',title='$title' where id=$id";
 	//echo $sql;
 	$update=mysql_query($sql);
@@ -89,12 +95,13 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 <html>
 <head>
 	<title>Page | admin</title>
-	<link rel="stylesheet" href="../assets/plugins/bootstrap/css/bootstrap.min.css" type="text/css">
+	  <!-- Global CSS -->
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">   
 	<script src="../assets/js/tinymce/tinymce.min.js"></script>
 	
 	<script>tinymce.init({
   selector: "textarea",  // change this value according to your HTML
-  content_css : "./assets/plugins/bootstrap/css/bootstrap.min.css",
+  content_css : "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css",
   plugins: "code",
   //toolbar: "code",
 });</script>	
@@ -143,14 +150,14 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 							<div class="alert alert-success"> <?php echo $msg; ?> </div>
 							<?php
 						}
-						$msg='';
+						//$msg='';
 						$error='';
 						?>
 					</div>
 				</div>
 				<div class="rows">
 					<div class="col-lg-12"><?php
-						if(isset($_POST['delete']) or isset($_GET['submit']) and $_GET['submit']=="show"){
+						if((isset($_POST['delete']) or isset($_GET['submit']) and $_GET['submit']=="show") ){
 
 							?>
 							<table class="table">
@@ -191,7 +198,7 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 				 	?>
 						<form action="#" method="POST" class="form-horizontal">
 							<div class="form-group">
-								<label>Page id:  <input type="text" class="form-control disabled" id="page_id"  name="page_id" <?php if(isset($_GET['add']) || isset($_POST['page_id'])) echo "readonly" ; ?> value=<?php echo '"'.$id.'"'; ?>  placeholder="enter page id">
+								<label>Page id:  <input type="text" class="form-control disabled" id="page_id"  name="page_id" <?php if(isset($_GET['add']) || isset($_POST['page_id']) || isset($_GET['open'])) echo "readonly" ; ?> value=<?php echo '"'.$id.'"'; ?>  placeholder="enter page id">
 								</label>
 								<input type="submit" name="open" value="open">
 								<label>Unique name:  <input type="text" class="form-control" id=""  name="name"   <?php if(!isset($_GET['add'])) echo "readonly" ; ?> value=<?php echo '"'.$name.'"'; ?>  placeholder="unique name without space">
@@ -203,7 +210,7 @@ if(isset($_GET['delete']) && $_GET['delete']=="delete"){
 
 								<div class="form-group"> <label for="content col-lg-5" >Content</label><br>     
 
-									<textarea name="content" cols="15"><?php echo $body; ?></textarea>
+									<textarea name="content" cols="15"><?php echo stripslashes($body); ?></textarea>
 								</div>
 								  
 
