@@ -1,5 +1,16 @@
 <?php
 include "connectdb.php";
+session_start();
+if(isset($_GET['logout'])){
+	session_destroy();
+	header("location: index.php");
+}
+$user='';
+if(isset($_SESSION['user'])){
+	$user=$_SESSION['user'];
+}
+
+
 $row='';
 $name='';
 if(basename($_SERVER['PHP_SELF'])=="page.php" && isset($_GET['name'])){
@@ -112,10 +123,28 @@ else if(basename($_SERVER['PHP_SELF'])=="event.php"){
                         <li><a href="#" ><i class="fa fa-linkedin"></i></a></li>
                         <li><a href="#" ><i class="fa fa-google-plus"></i></a></li>         
                       </ul> -->
+                    	<?php if(!isset($_SESSION['user'])){ ?>  
                       <form class="pull-right search-form" role="search">
                         <button class="btn "><a href="login.php">Login</a></button>&nbsp;&nbsp;
                         <button class="btn "><a href="signup.php">Signup</a></button>
                       </form>        
+                    
+                      <?php
+                      	}
+                      	else{
+
+
+                      ?>
+                      Hello <?php echo $user; ?>
+                      <form class="pull-right search-form" role="search">
+                        <button class="btn "><a href="registration.php">My account</a></button>
+                        <button class="btn "><a href=<?php echo "'./~$user'"; ?> >Web Profile</a></button>
+                        <button class="btn "><a href=<?php echo "'./~$user/filemanager.php'"; ?> >File Manager</a></button>&nbsp;&nbsp;
+                        <button class="btn "><a href="?logout=1">Logut</a></button>
+                      </form>  
+                      <?php 
+                      	}
+                      ?>
                     </div>      
                   </div><!--//to-bar-->
                   <div class="header-main container">

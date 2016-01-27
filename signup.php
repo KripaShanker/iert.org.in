@@ -7,21 +7,21 @@ $msg='';
 $newmess='';
 if(isset($_POST['submit']))
 {
-	$name=htmlspecialchars(mysql_real_escape_string($_POST['name']), ENT_QUOTES);
+	$username=htmlspecialchars(mysql_real_escape_string($_POST['username']), ENT_QUOTES);
 	$roll_no=htmlspecialchars(mysql_real_escape_string($_POST['roll_no']), ENT_QUOTES);
 	$email=htmlspecialchars(mysql_real_escape_string($_POST['email']), ENT_QUOTES);
 	$password=chr(rand(65,91)).chr(rand(65,91)).chr(rand(48,57)).chr(rand(65,91)).chr(rand(65,92)).chr(rand(48,57));
 
 
 
-	$auth_link="http://www.iert.org.in/pass_change.php?email=".$email;
+	$auth_link="http://www.iert.org.in/change_password.php?email=".$email;
 	$auth_link.="&roll_no=".$roll_no;
-	$auth_link.="&name=".$name;
+	$auth_link.="&username=".$username;
 	$message="Your temporary password is ".$password."\r\n";
 	$message.="You can try login using this link.\r\n".$auth_link;
-	$message.="\r\nThank you".$name."\r\nRegards, Web Team IERT";
+	$message.="\r\nThank you".$username."\r\nRegards, Web Team IERT";
 	mail($email,"Password For iert.org.in",$message,'From: <admin@iert.org.in>');
-	$result=mysql_query("INSERT INTO users values('','$email','$password','$roll_no')");
+	$result=mysql_query("INSERT INTO users(username,email,password,rollno) values('$username','$email','$password','$roll_no')");
 	if($result){
 		$msg="Check your email for password and further instruction";
 	}else{
@@ -54,10 +54,16 @@ if(isset($_POST['submit']))
 					<br/>					
 					<p><span class="required">*</span>These fields are mandatory. </p>
 					<form method="POST" action="signup.php">
+						<!--
 						<div class="form-group name">
 							<label for="name">Full Name<span class="required">*</span></label>
 							<input id="name" type="text" name="name" class="form-control" placeholder="Enter your name" required/>
-						</div><!--//form-group-->
+						</div>--><!--//form-group-->
+						<div class="form-group phone">
+							<label for="phone">username<span class="required">*</span></label>
+							<input id="phone" type="text" name="username" class="form-control" placeholder="e.g. ravi.singh" required/>
+						</div>
+
 						<div class="form-group email">
 							<label for="email">UPTU Roll No.</label>
 							<input id="email" type="text" name="roll_no" class="form-control" placeholder="Enter your UPTU Rollno">
@@ -66,6 +72,13 @@ if(isset($_POST['submit']))
 							<label for="phone">Email<span class="required">*</span></label>
 							<input id="phone" type="email" name="email" class="form-control" placeholder="Enter your email" required/>
 						</div><!--//form-group-->
+
+						
+
+						<div class="form-group phone">
+							<label for="phone">password<span class="required">*</span></label>
+							<input id="phone" type="password" name="password" class="form-control" placeholder="Enter your password" required/>
+						</div>
 
 						<button type="submit" class="btn btn-theme" name="submit">Submit</button>
 					</form>   
