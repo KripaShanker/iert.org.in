@@ -137,7 +137,7 @@ else if(basename($_SERVER['PHP_SELF'])=="event.php"){
                       ?>
                       Hello <?php echo $user; ?>
                       <form class="pull-right search-form" role="search">
-                        <a class="btn btn-default" href="registration.php">My account</a>
+                        <a class="btn btn-default" href="account.php">My account</a>
                         <a class="btn btn-default" href=<?php echo "'./~$user'"; ?> >Web Profile</a>
                         <a class="btn btn-default" href=<?php echo "'./~$user/filemanager.php'"; ?> >File Manager</a>&nbsp;&nbsp;
                         <a class="btn btn-default" href="?logout=1">Logut</a>

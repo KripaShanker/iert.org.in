@@ -25,7 +25,7 @@ if(!$_SESSION['_sfm_allowed']) {
 
 // must be in UTF-8 or `basename` doesn't work
 session_start();
-if(!isset($_SESSION['user'])){
+if(!isset($_SESSION['user']) && $_SESSION['user']!=basename(__DIR__)){
 	header("location: ..\login.php");
 }
 

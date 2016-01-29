@@ -15,6 +15,7 @@ if(isset($_POST['submit'])){
 		$res=mysql_query("UPDATE users set password='$password1' where email='$email' and password='$token'");
 		if($res){
 			$success="Password Changed successfully";
+			
 		}else
 			$error="error is".mysql_error($con);
 	}
@@ -55,7 +56,7 @@ if(isset($_POST['submit'])){
 			
 				<?php }?>
 				<?php if($error!="") {echo '<div class="alert alert-danger">'.$error.'</div>'; unset($error);}?> 
-				<?php if($success!="") {echo '<div class="alert alert-success">'.$success.'</div>'; unset($error);}?> 
+				<?php if($success!="") {echo '<div class="alert alert-success">'.$success.'</div><a class="btn btn-default" href="login.php">Login</a>'; unset($error);}?> 
 				</div><!--//course-wrapper-->
 				<aside class="page-sidebar  col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1">     
 					<?php

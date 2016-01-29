@@ -15,14 +15,14 @@ if(isset($_POST['submit']))
 	{
 		$email=$_POST['email'];
 		$password=$_POST['password'];
-		$res=mysql_query("SELECT * FROM users WHERE email='$email' and password='$password' ");
+		$res=mysql_query("SELECT email,password FROM users WHERE email='$email' and password='$password' ");
 		if(mysql_num_rows($res)){
 			
 			$row=mysql_fetch_array($res);
 			$_SESSION['user']=$row['username'];
 			$user=$row['username'];
 			$success="loged in successfully";
-			header("location: index.php");
+			//header("location: index.php");
 			
 
 		}else
@@ -78,9 +78,9 @@ if(isset($_POST['submit']))
 						<?php if(isset($success) || isset($user)){ ?> 
 						<div class="alert alert-success">
 							
-							<a class="btn btn-default" href="registration.php">My account</a>
-							<a class="btn btn-default" href=<?php echo "'./~$user'"; ?> >Web Profile</a>
-							<a class="btn btn-default" href=<?php echo "'./~$user/filemanager.php'"; ?> >File Manager</a>&nbsp;&nbsp;
+                            <a class="btn btn-default"  href="account.php">My account</a>
+							<a class="btn btn-default" target="_blank" href=<?php echo "'./~$user'"; ?> >Web Profile</a>
+							<a class="btn btn-default" target="_blank" href=<?php echo "'./~$user/filemanager.php'"; ?> >File Manager</a>&nbsp;&nbsp;
 							<a class="btn btn-default" href="?logout=1">Logut</a>
 						</div> 
 						<?php } ?>                
