@@ -1,7 +1,9 @@
 <?php
 include 'header.php';
 session_start();
-$user=$password=$error='';
+if(isset($_SESSION['user']))
+	$user=$_SESSION['user'];
+$password=$error='';
 if(isset($_POST['submit']))
 {
 
@@ -41,9 +43,9 @@ if(isset($_POST['submit']))
 <div class="content container">
 	<div class="page-wrapper">
 		<header class="page-heading clearfix">
-		<?php if($user==""){?>
+			<?php if(!isset($user)){?>
 			<h1 class="heading-title pull-left">Login</h1>
-		<?php } else echo '<h1 class="heading-title pull-left">Hello, <b>'.$user.'</b></h1>'; ?>
+			<?php } else echo '<h1 class="heading-title pull-left">Hello, <b>'.$user.'</b></h1>'; ?>
 			<div class="breadcrumbs pull-right">
 				<ul class="breadcrumbs-list">
 					<li class="breadcrumbs-label">You are here:</li>
@@ -55,10 +57,10 @@ if(isset($_POST['submit']))
 		<div class="page-content">
 			<div class="row">
 				<article class="contact-form col-md-8 col-sm-7  page-row">  
-					<?php if($user==""){ ?>
+					<?php if(!isset($user)){ ?>
 					<form method="POST" action="#">
 						<div class="form-group name">
-						
+							
 							<div class="form-group email">
 								<label for="email">Email<span class="required">*</span></label>
 								<input id="email" type="email" name="email" class="form-control" placeholder="Enter your email" required/>
@@ -71,17 +73,17 @@ if(isset($_POST['submit']))
 							<input type="submit" name="submit" class="btn btn-theme"></input>
 							<?php if($error!="") {echo '<div class="alert alert-danger">'.$error.'</div>'; unset($error);}?> 
 						</form>  
-					<?php } ?>
+						<?php } ?>
 
-						<?php if(isset($success)){ ?> 
-							<div class="alert alert-success">
+						<?php if(isset($success) || isset($user)){ ?> 
+						<div class="alert alert-success">
 							
-								<button class="btn "><a href="registration.php">My account</a></button>
-								<button class="btn "><a href=<?php echo "'./~$user'"; ?> >Web Profile</a></button>
-								<button class="btn "><a href=<?php echo "'./~$user/filemanager.php'"; ?> >File Manager</a></button>&nbsp;&nbsp;
-								<button class="btn "><a href="?logout=1">Logut</a></button>
-							</div> 
-							<?php } ?>                
+							<a class="btn btn-default" href="registration.php">My account</a>
+							<a class="btn btn-default" href=<?php echo "'./~$user'"; ?> >Web Profile</a>
+							<a class="btn btn-default" href=<?php echo "'./~$user/filemanager.php'"; ?> >File Manager</a>&nbsp;&nbsp;
+							<a class="btn btn-default" href="?logout=1">Logut</a>
+						</div> 
+						<?php } ?>                
 					</article><!--//contact-form-->
 					<aside class="page-sidebar  col-md-3 col-md-offset-1 col-sm-4 col-sm-offset-1">
 						<?php

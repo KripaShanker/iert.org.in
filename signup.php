@@ -14,19 +14,38 @@ if(isset($_POST['submit']))
 
 
 
-	$auth_link="http://www.iert.org.in/change_password.php?email=".$email;
-	$auth_link.="&roll_no=".$roll_no;
-	$auth_link.="&username=".$username;
+	$auth_link="http://www.iert.org.in/change_password.php?email=$email&roll_no=$roll_no&username=$username&token=$password";
+	//$auth_link.="&roll_no=".$roll_no;
+	//$auth_link.="&username=".$username;
+	//$auth_link.="&token=$password";
 	$message="Your temporary password is ".$password."\r\n";
 	$message.="You can try login using this link.\r\n".$auth_link;
 	$message.="\r\nThank you".$username."\r\nRegards, Web Team IERT";
-	mail($email,"Password For iert.org.in",$message,'From: <admin@iert.org.in>');
+	
 	$result=mysql_query("INSERT INTO users(username,email,password,rollno) values('$username','$email','$password','$roll_no')");
 	if($result){
 		$msg="Check your email for password and further instruction";
+		$res=mail($email,"Password For iert.org.in",$message,'From: <admin@iert.org.in>');
+		if($res){
+			mkdir("~$username");
+			if(!@copy('user/index.html',"~$username/index.html"))
+			{
+				$errors= error_get_last();
+				echo "COPY ERROR: ".$errors['type'];
+				echo "<br />\n".$errors['message'];
+			}
+			if(!@copy('user/filemanager.php',"~$username/filemanager.php"))
+			{
+				$errors= error_get_last();
+				echo "COPY ERROR: ".$errors['type'];
+				echo "<br />\n".$errors['message'];
+			}
+		}
 	}else{
 		$error=mysql_error($con);
 	}	
+	
+	
 
 
 }
@@ -83,14 +102,14 @@ if(isset($_POST['submit']))
 						<button type="submit" class="btn btn-theme" name="submit">Submit</button>
 					</form>   
 					<?php
-						if($error!=''){
-					?>
-					<div class="alert alert-danger"><?php echo $error; ?></div>
-					<?php
+					if($error!=''){
+						?>
+						<div class="alert alert-danger"><?php echo $error; ?></div>
+						<?php
 					}else if($msg!=''){
-					?>
-					 <div class="alert alert-success"><?php echo $msg; ?></div>
-					<?php
+						?>
+						<div class="alert alert-success"><?php echo $msg; ?></div>
+						<?php
 					}
 					?>             
 				</article><!--//contact-form-->

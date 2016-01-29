@@ -5,7 +5,7 @@ if(isset($_GET['logout'])){
 	session_destroy();
 	header("location: index.php");
 }
-$user='';
+
 if(isset($_SESSION['user'])){
 	$user=$_SESSION['user'];
 }
@@ -125,8 +125,8 @@ else if(basename($_SERVER['PHP_SELF'])=="event.php"){
                       </ul> -->
                     	<?php if(!isset($_SESSION['user'])){ ?>  
                       <form class="pull-right search-form" role="search">
-                        <button class="btn "><a href="login.php">Login</a></button>&nbsp;&nbsp;
-                        <button class="btn "><a href="signup.php">Signup</a></button>
+                        <a class="btn btn-default" href="login.php">Login</a>&nbsp;&nbsp;
+                        <a class="btn btn-default" href="signup.php">Signup</a>
                       </form>        
                     
                       <?php
@@ -137,10 +137,10 @@ else if(basename($_SERVER['PHP_SELF'])=="event.php"){
                       ?>
                       Hello <?php echo $user; ?>
                       <form class="pull-right search-form" role="search">
-                        <button class="btn "><a href="registration.php">My account</a></button>
-                        <button class="btn "><a href=<?php echo "'./~$user'"; ?> >Web Profile</a></button>
-                        <button class="btn "><a href=<?php echo "'./~$user/filemanager.php'"; ?> >File Manager</a></button>&nbsp;&nbsp;
-                        <button class="btn "><a href="?logout=1">Logut</a></button>
+                        <a class="btn btn-default" href="registration.php">My account</a>
+                        <a class="btn btn-default" href=<?php echo "'./~$user'"; ?> >Web Profile</a>
+                        <a class="btn btn-default" href=<?php echo "'./~$user/filemanager.php'"; ?> >File Manager</a>&nbsp;&nbsp;
+                        <a class="btn btn-default" href="?logout=1">Logut</a>
                       </form>  
                       <?php 
                       	}
