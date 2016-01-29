@@ -58,7 +58,9 @@ if(isset($_POST['submit']))
 <div class="content container">
 	<div class="page-wrapper">
 		<header class="page-heading clearfix">
+		<?php if($msg==''){ ?>
 			<h1 class="heading-title pull-left">New Registration</h1>
+		<?php } ?>
 			<div class="breadcrumbs pull-right">
 				<ul class="breadcrumbs-list">
 					<li class="breadcrumbs-label">You are here:</li>
@@ -70,7 +72,9 @@ if(isset($_POST['submit']))
 		<div class="page-content">
 			<div class="row">
 				<article class="contact-form col-md-8 col-sm-7  page-row">  
+					
 					<br/>					
+					<?php if($msg==''){ ?>
 					<p><span class="required">*</span>These fields are mandatory. </p>
 					<form method="POST" action="signup.php">
 						<!--
@@ -100,7 +104,8 @@ if(isset($_POST['submit']))
 						</div>
 
 						<button type="submit" class="btn btn-theme" name="submit">Submit</button>
-					</form>   
+					</form> 
+					<?php } ?>  
 					<?php
 					if($error!=''){
 						?>

@@ -12,7 +12,7 @@ if(isset($_POST['submit'])){
 	else if($password1=="" || $password2=="")
 		$error="empty password";
 	else{
-		$res=mysql_query("UPDATE users set password='$password1' where email='$email' and password=$token");
+		$res=mysql_query("UPDATE users set password='$password1' where email='$email' and password='$token'");
 		if($res){
 			$success="Password Changed successfully";
 		}else
