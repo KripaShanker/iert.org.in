@@ -20,7 +20,7 @@ if(isset($_POST['submit']))
 	//$auth_link.="&token=$password";
 	$message="Your temporary password is ".$password."\r\n";
 	$message.="You can try login using this link.\r\n".$auth_link;
-	$message.="\r\nThank you".$username."\r\nRegards, Web Team IERT";
+	$message.="\r\nThank you ".$username."\r\nRegards, Web Team IERT";
 	
 	$result=mysql_query("INSERT INTO users(username,email,password,rollno) values('$username','$email','$password','$roll_no')");
 	if($result){
