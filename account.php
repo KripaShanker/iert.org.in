@@ -67,6 +67,11 @@ if(!isset($_SESSION['user'])){
 								<td><?php echo $row['year'];?></td>
 
 							</tr>
+							<tr>
+								<td class="col-lg-4">About Me</td>
+								<td><?php echo stripslashes($row['about']);?></td>
+
+							</tr>
 						</table>
 						<table class="table">
 
@@ -74,42 +79,42 @@ if(!isset($_SESSION['user'])){
 
 							<tr>
 								<td class="col-lg-4">1st semester</td>
-								<td><?php echo $row['address'];?></td>
+								<td><?php echo $row['1st'];?></td>
 
 							</tr>
 							<tr>
 								<td class="col-lg-4">2nd semester</td>
-								<td><?php echo $row['address'];?></td>
+								<td><?php echo $row['2nd'];?></td>
 								
 							</tr>
 							<tr>
 								<td class="col-lg-4">3rd semester</td>
-								<td><?php echo $row['address'];?></td>
+								<td><?php echo $row['3rd'];?></td>
 								
 							</tr>
 							<tr>
 								<td class="col-lg-4">4th semester</td>
-								<td><?php echo $row['address'];?></td>
+								<td><?php echo $row['4th'];?></td>
 								
 							</tr>
 							<tr>
 								<td class="col-lg-4">5th semester</td>
-								<td><?php echo $row['address'];?></td>
+								<td><?php echo $row['5th'];?></td>
 								
 							</tr>
 							<tr>
 								<td class="col-lg-4">6th semester</td>
-								<td><?php echo $row['address'];?></td>
+								<td><?php echo $row['6th'];?></td>
 								
 							</tr>
 							<tr>
 								<td class="col-lg-4">7th semester</td>
-								<td><?php echo $row['address'];?></td>
+								<td><?php echo $row['7th'];?></td>
 								
 							</tr>
 							<tr>
 								<td class="col-lg-4">8th semester</td>
-								<td><?php echo $row['address'];?></td>
+								<td><?php echo $row['8th'];?></td>
 								
 							</tr>
 						</table>

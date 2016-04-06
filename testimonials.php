@@ -17,17 +17,23 @@
                                             <img class="profile col-md-4 pull-right img-circle" src="https://dl.dropboxusercontent.com/s/s8tecfful85r56p/vimal_mishra.png"  alt="" />
                                         </div>                               
                                     </div><!--//item-->
-									<!--
+									
+                                    <?php if(isset($_SESSION['user'])){
+                                        $username=$_SESSION['user'];
+                                        $row=mysql_fetch_array(mysql_query("SELECT username, about, year from users where username='$username' "));
+                                        ?>
                                     <div class="item">
                                         <blockquote class="quote">
                                             <p><i class="fa fa-quote-left"></i>
-                                            I'm very pleased commodo gravida ultrices. Sed massa leo, aliquet non velit eu, volutpat vulputate odio. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse porttitor metus eros, ut fringilla nulla auctor a.</p>
+                                            <?php echo $row['about']; ?></p>
                                         </blockquote>
                                         <div class="row">
-                                            <p class="people col-md-8 col-sm-3 col-xs-8"><span class="name">Marco Antonio</span><br /><span class="title"> Gravida ultrices</span></p>
-                                            <img class="profile col-md-4 pull-right" src="assets/images/testimonials/profile-2.png"  alt="" />
+                                            <p class="people col-md-8 col-sm-3 col-xs-8"><span class="name"><?php echo $username; ?></span><br /><span class="title"> <?php echo $row['year']." year"; ?> </span></p>
+                                            <img class="profile col-md-4 pull-right" src="assets/images/testimonials/profile.png"  alt="Profile Pic" />
                                         </div>                 
-                                    </div><!--//item-->
+                                    </div>
+                                    <?php } ?>
+                                    <!--//item-->
 									<!--
                                     <div class="item">
                                         <blockquote class="quote">

@@ -27,7 +27,7 @@ if(isset($_POST['page_id']) || isset($_GET['page_id'])){
 if(isset($_POST['name']))
 	$name=$_POST['name'];
 //echo $body;
-//echo "page id $id";
+#echo "page id $id";
 $sql="SELECT * from pages where id='$id' or name='$name'";
 //echo $sql;
 $result=mysql_query($sql);
@@ -61,10 +61,13 @@ else if(isset($_POST['submit']) && $title!=''){
 	$title=addslashes($_POST['title']);
 	//if id is not set
 	$row=mysql_fetch_array($result);
-	$id=$row['id'];
-	
+	#$id=$row['id'];
+	if(isset($GET['page_id']))
+		$id=$GET['page_id'];
+
+	#echo "pageid open= ".$GET['open'];
 	$sql="UPDATE pages set body='$body',title='$title' where id=$id";
-	//echo $sql;
+	#echo $sql;
 	$update=mysql_query($sql);
 	if($update){
 		$msg="page updated";

@@ -29,6 +29,7 @@ if(!isset($_SESSION['email'])){
 					<ul class="nav navbar-nav">
 						<li class="active"><a href="pages.php?submit=show">Pages</a></li>
 						<li><a href="events.php?submit=show">Events</a></li>
+						<li><a href="technovation.php">Technovation</a></li>
 
 						
 					</ul>
@@ -80,6 +81,20 @@ if(!isset($_SESSION['email'])){
 
 
 		</div>
+
+		<div class="rows">
+		
+			<div class="col-lg-6">
+			<a href="technovation.php" target="_blank" class="btn btn-success">Technovation</a> Click to Manage Technovation website.
+			<p>
+				All the detail of events are fetched from google form filled by team lead of event.
+			</p>
+			</div>
+			<div class="col-lg-6">
+				Rest will be managed by CMS.
+			</div>
+		</div>
+
 		<div class="rows">
 			<div class="col-lg-6">
 			<a href="dropbox.php" target="_blank" class="btn btn-success">dropbox</a> Click to genreate dropbox public link.
@@ -87,17 +102,20 @@ if(!isset($_SESSION['email'])){
 				As dropbox will be used to host images and videos a public link need to be generated which is usable on website.
 			</p>
 			</div>
-			<div class"col-lg-6">
+			<div class="col-lg-6">
 				<a href="youtube.php" target="_blank" class="btn btn-success">youtube embeded url</a>
 				For embeding videos in site, <br>use this tool generate embeded code.
 			</div>
 		</div>
 
 
+		
 
-
+		
 
 	</div>
+
+		
 </body>
 </html>
 
