@@ -51,7 +51,7 @@
         <div class="bottom-bar">
             <div class="container">
                 <div class="row">
-                    <small class="copyright col-md-6 col-sm-12 col-xs-12">Website Developed by <a href="#">Web Team, IERT</a></small>
+                    <small class="copyright col-md-6 col-sm-12 col-xs-12">Website Developed by <a href="page.php?name=web team">Web Team, IERT</a></small>
                     <!--ul class="social pull-right col-md-6 col-sm-12 col-xs-12">
                         <li><a href="#" ><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#" ><i class="fa fa-facebook"></i></a></li>

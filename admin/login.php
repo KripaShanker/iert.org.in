@@ -82,8 +82,8 @@ if (isset($_POST['submit'])) {
   			<div class="col-lg-6">
   				<form class="form-signin" action="login.php" method="post">
   					<h2 class="form-signin-heading">Please sign in</h2><br/><br/>
-  					<label for="inputEmail" >email</label><br/>
-  					<input type="text" id="inputEmail" class="form-control" placeholder="1311010024" name="email"><br/><br/>
+  					<label for="inputEmail" >username or email</label><br/>
+  					<input type="text" id="inputEmail" class="form-control" placeholder="abc@gmail.com" name="email"><br/><br/>
   					<label for="inputPassword">Password</label><br/>
   					<input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password">
   					<?php 

@@ -59,7 +59,7 @@
 				$row=mysql_fetch_array($res);
 
 ?>
-		<a href="admin.php" class="btn btn-default">home</a><a href="logout.php" class="btn btn-default">logout</a>
+		<a href="technovation.php" class="btn btn-default">home</a><a href="logout.php" class="btn btn-default">logout</a>
 		<form action="#" method="get">
 			Name: <input type="text" name="name" value="<?php echo $row['name']; ?>" style="width:100%"><br><br>
 			Desc: <input type="text" name="desc" value="<?php echo $row['desc']; ?>" style="width:100%"><br><br>
@@ -91,7 +91,7 @@
 			<table class="table">
 			<?php
 				while ($row=mysql_fetch_array($res)) {
-					echo "<tr> <td>".$row['name']."</td> <td>".$row['lead']."</td><td><a class=\"btn btn-primary\" href='admin.php?name=$row[name]'>edit</a></td> </tr>";
+					echo "<tr> <td>".$row['name']."</td> <td>".$row['lead']."</td><td><a class=\"btn btn-primary\" href='technovation.php?name=$row[name]'>edit</a></td> </tr>";
 				}
 			?>
 			</table>
