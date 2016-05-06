@@ -114,7 +114,7 @@ include 'header.php';
 				<p>&nbsp;</p>
 			</div><!--//section-content-->
 			<div class="col-md-6">
-				<p><a href="#"><h3><em>Computer Science Society</em></h3></a></p>
+				<p><a href="page.php?name=IERT-Programming-Group"><h3><em>Computer Science Society</em></h3></a></p>
 				<p><a href="page.php?name=IERT-Programming-Group">Computer Science Society</a></p>
 				<p> &nbsp;</p>
 			</div><!--//section-content-->
