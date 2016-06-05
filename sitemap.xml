@@ -7,143 +7,248 @@
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 <url>
-  <loc>http://iert.org.in/</loc>
+  <loc>https://iert.org.in/</loc>
+  <changefreq>monthly</changefreq>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/login.php</loc>
+  <loc>https://iert.org.in/login.php</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/signup.php</loc>
+  <loc>https://iert.org.in/signup.php</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/index.php</loc>
+  <loc>https://iert.org.in/index.php</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=about</loc>
+  <loc>https://iert.org.in/page.php?name=about</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=history</loc>
+  <loc>https://iert.org.in/page.php?name=history</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=dir_desk</loc>
+  <loc>https://iert.org.in/page.php?name=dir_desk</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=council</loc>
+  <loc>https://iert.org.in/page.php?name=council</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=courses</loc>
+  <loc>https://iert.org.in/page.php?name=courses</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=fees</loc>
+  <loc>https://iert.org.in/page.php?name=fees</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=btech</loc>
+  <loc>https://iert.org.in/page.php?name=btech</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=diploma</loc>
+  <loc>https://iert.org.in/page.php?name=diploma</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=cse</loc>
+  <loc>https://iert.org.in/page.php?name=cse</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=elex</loc>
+  <loc>https://iert.org.in/page.php?name=elex</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=ip</loc>
+  <loc>https://iert.org.in/page.php?name=ip</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=ee</loc>
+  <loc>https://iert.org.in/page.php?name=ee</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=ic</loc>
+  <loc>https://iert.org.in/page.php?name=ic</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=me</loc>
+  <loc>https://iert.org.in/page.php?name=me</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=civil</loc>
+  <loc>https://iert.org.in/page.php?name=civil</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=achievements</loc>
+  <loc>https://iert.org.in/students.php</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=life_iert</loc>
+  <loc>https://iert.org.in/page.php?name=achievements</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=hostel</loc>
+  <loc>https://iert.org.in/page.php?name=hostel</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=facilities</loc>
+  <loc>https://iert.org.in/page.php?name=facilities</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=library</loc>
+  <loc>https://iert.org.in/page.php?name=library</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=technovation</loc>
+  <loc>https://iert.org.in/page.php?name=life_iert</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=sports</loc>
+  <loc>https://iert.org.in/page.php?name=technovation</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=udbhav</loc>
+  <loc>https://iert.org.in/page.php?name=sports</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=freshers</loc>
+  <loc>https://iert.org.in/page.php?name=udbhav</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=farewell</loc>
+  <loc>https://iert.org.in/page.php?name=freshers</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=tpo</loc>
+  <loc>https://iert.org.in/page.php?name=farewell</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=recruiters</loc>
+  <loc>https://iert.org.in/page.php?name=tpo</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/page.php?name=contact</loc>
+  <loc>https://iert.org.in/page.php?name=recruiters</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/event.php?name=Practical%20Exams</loc>
+  <loc>https://iert.org.in/page.php?name=contact</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/event.php?name=christmas</loc>
+  <loc>https://iert.org.in/event.php?name=AKTU-SEE%20results</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>http://iert.org.in/event.php?name=Happy%20New%20Year</loc>
+  <loc>https://iert.org.in/event.php?name=Diploma-Admission-form</loc>
+  <changefreq>monthly</changefreq>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://iert.org.in/event.php?name=Admission%20Btech%202016</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://iert.org.in/event.php?name=technovation-2016</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://iert.org.in/event.php?name=TCS%20Placement%202015</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://iert.org.in/event.php?name=UCERTIFY</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://iert.org.in/page.php?name=IERT-Programming-Group</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://iert.org.in/page.php?name=scholarship</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://iert.org.in/page.php?name=calender</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://iert.org.in/page.php?name=faq</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://iert.org.in/page.php?name=web%20team</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://iert.org.in/login.php?forget=password</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://iert.org.in/students.php?year=1</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://iert.org.in/students.php?year=2</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://iert.org.in/students.php?year=3</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://iert.org.in/students.php?year=4</loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.64</priority>
 </url>
 </urlset>
